@@ -91,7 +91,7 @@ section {
 }
 
 .banner .contentBx h4 span {
-    color: #00bcd4;
+    color: #3586ff;
     font-size: 1.5em;
     font-weight: 700;
 }
@@ -109,7 +109,7 @@ p {
 }
 
 .btn {
-    background: #00bcd4;
+    background: #3586ff;
     color: #fff;
     padding: 10px 30px;
     display: inline-block;
@@ -208,7 +208,7 @@ p {
 
 .title  h2 {
     position: relative;
-    color: #00bcd4;
+    color: #3586ff;
     font-size: 1.8em;
     font-weight: 700;
     letter-spacing: 1px;
@@ -411,7 +411,7 @@ p {
 }
 
 .contact .contactForm .row input[type="submit"] {
-    background: #00bcd4;
+    background: #3586ff;
     color: #fff;
     padding: 10px 30 px;
     display: inline-block;
@@ -421,17 +421,125 @@ p {
     max-width: 150px;
 }
 
-.copyright {
-    color: #fff;
-    background: #111;
-    text-align: center;
-    padding: 10px;
+
+footer {
+    position: relative;
+    width: 100%;
+    background: #3586ff;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.copyright p {
-    margin: 0;
-    font-size: 16px;
+footer .social_icon,
+footer .menu2
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
 }
+
+footer .social_icon li,
+footer .menu2 li
+{
+    list-style: none;
+
+}
+
+footer .social_icon li a {
+    font-size: 2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    opacity: 0.75;
+}
+
+footer .social_icon li a:hover {
+    transform: translateY(-10px);
+    opacity: 1;
+}
+
+footer .menu2 li a {
+    font-size: 1.2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+    opacity: 0.75;
+}
+
+footer .menu2 li a:hover {
+    opacity: 1;
+}
+
+footer p {
+    color: #000;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    font-weight: 400;
+}
+footer .wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("images/wave.png");
+    background-size: 1000px 100px;
+}
+
+footer .wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWave 4s linear infinite;
+}
+footer .wave#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 15px;
+    animation: animateWave_02 4s linear infinite;
+}
+footer .wave#wave3 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 0;
+    animation: animateWave 3s linear infinite;
+}
+footer .wave#wave4 {
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animateWave_02 3s linear infinite;
+}
+
+@keyframes animateWave {
+    0% {
+        background-position-x: 1000px;
+    }
+    100% {
+        background-position-x: 0px;
+    }
+}
+
+@keyframes animateWave_02 {
+    0% {
+        background-position-x: 0px;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
 
 @media (max-width: 991px) {
     .banner .imgSidebar {
