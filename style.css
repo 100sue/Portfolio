@@ -102,7 +102,12 @@ section {
 }
 .banner .contentBx h5 {
     font-size: 1.5em;
-    color: #3586ff;
+    color: #fff;
+    font-weight: 700;
+}
+.banner .contentBx h6 {
+    font-size: 1.5em;
+    color:  #3586ff;
     font-weight: 700;
 }
 
@@ -138,6 +143,7 @@ p {
     text-decoration: none;
     font-weight: 500;
     letter-spacing: 2px;
+    margin-top: 10px;
 }
 
 .sideBar {
@@ -376,6 +382,7 @@ p {
     background: #000;
     opacity: 0;
     transition: 0.5s;
+    display: block;
 }
 
 .work .content .workBx:hover .textBx {
@@ -384,8 +391,17 @@ p {
 
 .work .content .workBx .textBx h3 {
     color: #fff;
+    margin-top: 90px;
     text-transform: uppercase;
     letter-spacing: 1px;
+    font-size: 1em;
+}
+.work .content .workBx .textBx h3 p {
+    color: #fff;
+    font-size: 0.3em;
+}
+.work .content .workBx .textBx h4 {
+    color: #3586ff;
     font-size: 1em;
 }
 .contact {
@@ -412,7 +428,9 @@ p {
 .contact .contactForm .row .col50 {
     width: 50%;
     margin: 10px;
+    position: relative;
 }
+
 .contact .contactForm .row .col100 {
     width: 100%;
     margin: 10px;
@@ -430,6 +448,24 @@ p {
     color: #fff;
     font-size: 16px;
     resize: none;
+}
+.contact .contactForm .row input label {
+    position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px ;
+  font-size: 16px;
+  color: blue;
+  pointer-events: none;
+  transition: .5s;
+}
+.contact .contactForm .row input:focus ~ label,
+.contact .contactForm .row input:valid ~ label 
+{
+    top: -18px;
+  left: 0;
+  font-size: 12px;
+  color: #FD2D01;
 }
 
 .contact .contactForm .row textarea {
