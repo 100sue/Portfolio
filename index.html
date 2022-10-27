@@ -175,32 +175,34 @@
         <p data-center-center="opacity:1;bottom:0px;" data-0-bottom="opacity:0;bottom:-400px;">Lorem ipsum dolor, sit amet consectetur adipisicing 
             sit amet consectetur adipisicing elit.</p>
     </div>
-    <div class="contactForm" data-center-center="opacity:1;bottom:0px;" data-0-bottom="opacity:0;bottom:-100px;">
-        <div class="row">
-            <div class="col50">
-                <input type="text" name="" placeholder="Nom">
+    <form onsubmit="runcode(e)" action="https://formsubmit.co/scoreur@gmail.com"  method="POST">
+      <div class="contactForm" data-center-center="opacity:1;bottom:0px;" data-0-bottom="opacity:0;bottom:-100px;">
+            <div class="row">
+                <div class="col50">
+                    <input type="text" name="name" placeholder="Nom" required>
+                </div>
+                <div class="col50">
+                    <input type="text" name="Last Name" placeholder="Prénom">
+                </div>
+                <div class="col50">
+                    <input type="text" name="email" placeholder="Email" required>
+                </div>
+                <div class="col50">
+                    <input type="text" name="phone" placeholder="Mobile No.">
+                </div>
             </div>
-            <div class="col50">
-                <input type="text" name="" placeholder="Prénom">
-            </div>
-            <div class="col50">
-                <input type="text" name="" placeholder="Email">
-            </div>
-            <div class="col50">
-                <input type="text" name="" placeholder="Mobile No.">
+            <div class="row">
+               <div class="col100">
+                  <textarea placeholder="message" name="Message" required></textarea>
+                </div>
+           </div>
+           <div class="row">
+               <div class="col100">
+                  <button type="submit">Envoyez</button>
+               </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col100">
-                <textarea placeholder="Message"></textarea>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col100">
-                <input type="submit" value="envoyez">
-            </div>
-        </div>
-    </div>
+    </form>
 </section>
 
 
@@ -251,6 +253,11 @@
 <script src="https://unpkg.com/typewriter-effect@2.18.2/dist/core.js"></script>
 <script src="app.js"></script> 
 
+<script>
+    function runCode(e) {
+        e.preventDefault();
+    }
+</script>
     
 </body>
 </html>

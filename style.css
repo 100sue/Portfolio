@@ -472,7 +472,7 @@ p {
     height: 100px;
 }
 
-.contact .contactForm .row input[type="submit"] {
+.contact .contactForm .row button{
     background: #3586ff;
     color: #fff;
     padding: 10px 30 px;
