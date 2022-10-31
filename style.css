@@ -12,6 +12,7 @@
 body {
     overflow-x: hidden;
     background: #333;
+
 }
 
 .toggle {
@@ -35,6 +36,47 @@ body {
     background-repeat: no-repeat;
 }
 
+.cursor {
+    z-index: 200;
+    position: fixed;
+    background: #3586ff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 20px #3586ff,
+                0 0 60px #3586ff,
+                0 0 100px #3586ff;
+    animation: colors 5s infinite;
+    transform: translate(-50%, -50%);
+    display: none;            
+}
+ul li:hover ~ .cursor {
+    transform: scale(6);
+}
+
+@keyframes colors {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.cursor:before {
+    content: '';
+    position: absolute;
+    background: #3586ff;
+    width: 50px;
+    height: 50px;
+    opacity: 0.2;
+    transform: translate(-30%, -30%);
+    border-radius: 50%;
+
+}
+
+
 section {
     padding: 100px;
     min-height: 100vh;
@@ -44,6 +86,7 @@ section {
     position: relative;
     width: 80%;
     min-height: 100vh;
+    cursor: none;
 }
 
 .banner .imgSidebar {
@@ -422,7 +465,7 @@ p {
     align-items: center;
     flex-direction: column;
 }
-.content {
+.contact .content {
     position: relative;
     margin-right: 355px;
 }
