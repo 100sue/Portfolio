@@ -1,28 +1,15 @@
-const cursor = document.querySelector('.cursor');
-var timeout;
+let mouseCursor = document.querySelector('.cursor');
+let navLinks= document.querySelector('navlink a');
 
+window.addEventListener('mousemove', cursor);
 
-// Follow cursor on mousemove :
-document.addEventListener("mousemove", (e) => {
-    let x = e.pageX;
-    let y = e.pageY;
+function cursor(e) {
+    mouseCursor.style.top = e.pageY +'px';
+    mouseCursor.style.left = e.pageX +'px';
+}
 
-    cursor.style.top = y + "px";
-    cursor.style.left = x + "px";
-    cursor.style.display = "block";
-
-
-// Cursor effect on mouse stopped :
- function mouseStopped() {
-    cursor.style.display = "none";
-    }
-   clearTimeout(timeout);
-    timeout = setTimeout(mouseStopped, 1000)
-
- });
-
-
-// Cursor effect on mouseout
-document.addEventListener("mouseout", (e) => {
-    cursor.style.display = "none";
+navLinks.forEach(link => {
+    link.addEventListener('mouseover', () => {
+        mouseCursor.classList.add('link-grow');
+    });
 });
